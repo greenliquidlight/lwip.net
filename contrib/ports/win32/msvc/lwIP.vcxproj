@@ -399,6 +399,7 @@
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\..\..\mbedtls\include;..\..\..\..\src\include;..\..\..\..\src\include\ipv4;..\..\..\..\src\include\ipv6;..\include;..;..\..\..\apps\snmp_private_mib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\..\..\..\src\netif\zepif.c" />
+    <ClCompile Include="..\example_app_platform.c" />
     <ClCompile Include="..\sio.c" />
     <ClCompile Include="..\sys_arch.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug unittests|Win32'">true</ExcludedFromBuild>

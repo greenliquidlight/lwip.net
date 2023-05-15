@@ -526,6 +526,9 @@
     <ClCompile Include="..\..\..\..\src\apps\mdns\mdns_out.c">
       <Filter>src\apps\mdns</Filter>
     </ClCompile>
+    <ClCompile Include="..\example_app_platform.c">
+      <Filter>arch</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\src\include\lwip\apps\lwiperf.h">
