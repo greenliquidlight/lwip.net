@@ -529,6 +529,7 @@
     <ClCompile Include="..\example_app_platform.c">
       <Filter>arch</Filter>
     </ClCompile>
+    <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\src\include\lwip\apps\lwiperf.h">
@@ -1074,5 +1075,7 @@
     <ClInclude Include="..\..\..\..\src\include\lwip\apps\mdns_out.h">
       <Filter>src\include\lwip\apps</Filter>
     </ClInclude>
+    <ClInclude Include="..\lwipcfg.h" />
+    <ClInclude Include="..\..\..\examples\ppp\pppos_example.h" />
   </ItemGroup>
 </Project>

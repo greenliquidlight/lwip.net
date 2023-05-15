@@ -42,7 +42,7 @@
 
 #ifdef _MSC_VER
 #pragma warning( push, 3 )
-#include "pcap.h"
+//#include "pcap.h"
 #pragma warning ( pop )
 #else
 /* e.g. mingw */
