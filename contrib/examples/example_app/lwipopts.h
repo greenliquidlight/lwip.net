@@ -75,6 +75,8 @@
 #define LWIP_NETIF_EXT_STATUS_CALLBACK  1
 
 #define LWIP_DEBUG                 1
+#define PPP_DEBUG LWIP_DBG_ON
+#define PRINTPKT_SUPPORT 1
 #ifdef LWIP_DEBUG
 
 #define LWIP_DBG_MIN_LEVEL         0

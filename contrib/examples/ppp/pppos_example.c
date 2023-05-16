@@ -189,7 +189,7 @@ pppos_example_init(void)
 {
 #if PPPOS_SUPPORT
 #if PPP_PTY_TEST
-  ppp_sio = sio_open(2);
+  ppp_sio = sio_open(1);
 #else
   ppp_sio = sio_open(0);
 #endif
@@ -211,6 +211,7 @@ pppos_example_init(void)
 #endif
 
   ppp_connect(ppp, 0);
+  
 
 #if LWIP_NETIF_STATUS_CALLBACK
   netif_set_status_callback(&pppos_netif, netif_status_callback);

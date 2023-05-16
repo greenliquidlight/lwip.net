@@ -375,7 +375,8 @@ static void lcp_init(ppp_pcb *pcb) {
     wo->neg_mru = 1;
     wo->mru = PPP_MRU;
     wo->neg_asyncmap = 1;
-    wo->neg_magicnumber = 1;
+    //wo->neg_magicnumber = 1;
+	wo->neg_magicnumber = 0;
     wo->neg_pcompression = 1;
     wo->neg_accompression = 1;
 
@@ -393,7 +394,8 @@ static void lcp_init(ppp_pcb *pcb) {
 #if EAP_SUPPORT
     ao->neg_eap = 1;
 #endif /* EAP_SUPPORT */
-    ao->neg_magicnumber = 1;
+    //ao->neg_magicnumber = 1;
+	ao->neg_magicnumber = 0;
     ao->neg_pcompression = 1;
     ao->neg_accompression = 1;
     ao->neg_endpoint = 1;

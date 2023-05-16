@@ -62,7 +62,7 @@ pppos_rx_thread(void* arg)
             /* Pass received raw characters from PPPoS to be decoded through lwIP
              * TCPIP thread using the TCPIP API. This is thread safe in all cases
              * but you should avoid passing data byte after byte. */
-            pppos_input_tcpip(ppp, buffer, len);
+            pppos_input(ppp, buffer, len);
         }
     }
 }
@@ -211,6 +211,13 @@ main (void)
 #ifdef LWIP_PPP_CHAP_TEST
     ppp_set_auth(ppp, PPPAUTHTYPE_CHAP, "lwip", "mysecret");
 #endif
+   
+    // set up the ip address for our pppos interface
+    /* Set our address */
+    ip4_addr_t addr;
+
+    IP4_ADDR(&addr, 200, 200, 200, 10);
+    ppp_set_ipcp_ouraddr(ppp, &addr);
 
     ppp_connect(ppp, 0);
 
@@ -220,4 +227,13 @@ main (void)
 
     sys_thread_new("pppos_rx_thread", pppos_rx_thread, NULL, DEFAULT_THREAD_STACKSIZE, DEFAULT_THREAD_PRIO);
 #endif /* PPPOS_SUPPORT */
+
+    while (1)
+    {
+        sys_check_timeouts();
+
+        // Add any additional processing or application logic here
+
+        sys_msleep(10);
+    }
 }
